@@ -23,4 +23,4 @@ jobs:
       - run: mkdir pdf  # create folder if not exists
       - uses: docker://pandoc/latex # use pandoc docker container with latex
         with:
-          args: _data/details.yml -o pdf/cv.pdf --template=_template/cv.tex 
+          args:  _data/details.yml -o pdf/cv.pdf --template=_templates/cv.tex --resource-path=.:src 
